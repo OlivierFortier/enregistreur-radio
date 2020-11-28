@@ -8,10 +8,12 @@ const duration = require("dayjs/plugin/duration");
 dayjs.extend(objectSupport);
 dayjs.extend(duration);
 
-const duree = dayjs.duration({ hours: 3 }).asMilliseconds();
+const duree = dayjs.duration({ hours: 2, minutes: 55 }).asMilliseconds();
+
+console.log(duree);
 
 let job = schedule.scheduleJob(
-  { hour: 17, minute: 0, dayOfWeek: 6 },
+  { hour: 17, minute: 5, dayOfWeek: 6 },
   function () {
     const file = fs.createWriteStream("./la_fievre.mp3");
 
