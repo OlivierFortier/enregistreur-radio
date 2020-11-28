@@ -10,8 +10,6 @@ dayjs.extend(duration);
 
 const duree = dayjs.duration({ hours: 2, minutes: 55 }).asMilliseconds();
 
-console.log(duree);
-
 let job = schedule.scheduleJob(
   { hour: 17, minute: 5, dayOfWeek: 6 },
   function () {
