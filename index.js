@@ -8,7 +8,7 @@ const duration = require("dayjs/plugin/duration");
 dayjs.extend(objectSupport);
 dayjs.extend(duration);
 
-const duree = dayjs.duration({ hours: 2, minutes: 55 }).asMilliseconds();
+const duree = dayjs.duration({ hours: 2, minutes: 50 }).asMilliseconds();
 
 let job = schedule.scheduleJob(
   { hour: 17, minute: 5, dayOfWeek: 6 },
